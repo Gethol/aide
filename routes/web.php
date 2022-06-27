@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RedirectAuthenticatedUsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,42 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+
+Route::group(['middleware' => 'auth'], function() {
+
+    Route::get("/redirectAuthenticatedUsers", [RedirectAuthenticatedUsersController::class, "index"]);
+
+    Route::name('admin.')->prefix('admin')->middleware('checkRole:admin')->group(function() {
+
+        Route::get('/dashboard', function () {
+            return view('admin.dashboard');
+        })->name('dashboard');
+
+    });
+
+    Route::middleware('checkRole:user')->group(function() {
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->name('dashboard');
+
+    });
+
+
+    Route::name('emt.')->prefix('emt')->middleware('checkRole:emt')->group(function() {
+        
+        Route::get('/dashboard', function () {
+            return view('emt.dashboard');
+        })->name('dashboard');
+
+    });
+});
+
+
+
+
+require __DIR__.'/auth.php';
