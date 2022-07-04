@@ -11,6 +11,10 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in as a Regular User! 
                 </div>
+                <div>
+
+                    <a href="{{ route('medical-info.edit', Auth::id()) }}">Edit Medical Information</a>
+                </div>
             </div>
         </div>
     </div>

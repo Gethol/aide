@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MedicalInformationController;
 use App\Http\Controllers\Auth\RedirectAuthenticatedUsersController;
 
 /*
@@ -36,9 +37,12 @@ Route::group(['middleware' => 'auth'], function() {
     });
 
     Route::middleware('checkRole:user')->group(function() {
+        
         Route::get('/dashboard', function () {
             return view('dashboard');
         })->name('dashboard');
+
+        Route::resource('medical-info', MedicalInformationController::class);
 
     });
 
