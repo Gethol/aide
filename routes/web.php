@@ -54,8 +54,8 @@ Route::group(['middleware' => 'auth'], function() {
             return view('emt.dashboard');
         })->name('dashboard');
 
-        Route::get('/findPatient',[EMTController::class, 'view'])->name('findPatient');
-        Route::post('/findPatient2',[EMTController::class, 'view2'])->name('findPatient2');
+        Route::any('/findPatient',[EMTController::class, 'view'])->name('findPatient');
+
 
     });
 });

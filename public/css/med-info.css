@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+  display: flex;
+  height: 200vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0099FF,#FFCC00);
+}
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 20px;
+}
+
+.container .med-details{
+ align-items: center;
+}
+
+.container img{
+  width: 25px;
+  height: 25px;
+}
+
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg, #0099FF,#FFCC00);
+}
+
+form .med-details .input-box{
+margin-left: 20px 0 12px 0;
+margin-bottom: 15px;
+}
+
+.med-details .input-box .details{
+  display: block;
+  padding-top: 10px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+form .med-details .input-box input{
+ width: 100%;
+ height: 45px;
+ border-radius: 15px;
+ outline: none;
+ border: 1px solid #ccc;
+ padding-left: 15px;
+ margin-top: 5px;
+ margin-bottom: 2px;
+ padding: 15px;
+  transition: all 0.3s ease;
+}
+
+form .med-details .input-box textarea{
+  width: 100%;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.med-details .input-box input:focus,
+.med-details .input-box input:valid{
+border-color: #FFCC00;
+}
+
+.med-details .input-box textarea:focus,
+.med-details .input-box textarea:valid{
+border-color: #FFCC00;
+}
+
+form .button{
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #0099FF,#FFCC00);
+}
+
+form .button input:hover{
+  background: linear-gradient(-135deg, #0099FF,#FFCC00);
+}
+
+@media (max-width: 584px){
+  .container{
+    max-width: 100%;
+  }
+  form .med-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .container form .med-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  
+}
+
+
