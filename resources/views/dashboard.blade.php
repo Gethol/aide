@@ -15,6 +15,11 @@
 
                     <a href="{{ route('medical-info.edit', Auth::id()) }}">Edit Medical Information</a>
                 </div>
+
+                <div>
+                    <a href="{{ route('medical-info.show', Auth::id()) }}">Medical Information</a>
+                </div>
+
             </div>
         </div>
     </div>

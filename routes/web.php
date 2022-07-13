@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MedicalInformationController;
 use App\Http\Controllers\Auth\RedirectAuthenticatedUsersController;
+use App\Http\Controllers\EMTController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,9 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('/dashboard', function () {
             return view('emt.dashboard');
         })->name('dashboard');
+
+        Route::get('/findPatient',[EMTController::class, 'view'])->name('findPatient');
+        Route::post('/findPatient2',[EMTController::class, 'view2'])->name('findPatient2');
 
     });
 });
