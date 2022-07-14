@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MedicalInformationController;
 use App\Http\Controllers\Auth\RedirectAuthenticatedUsersController;
 use App\Http\Controllers\EMTController;
+use App\Http\Controllers\FirstAidController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,8 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('/dashboard', function () {
             return view('admin.dashboard');
         })->name('dashboard');
+
+        Route::resource('firstAid', FirstAidController::class);
 
     });
 
