@@ -99,7 +99,7 @@ class FirstAidController extends Controller
     public function show($id)
     {
         //
-        $instruction = FirstAidInstruction::find($id)->first();
+        $instruction = FirstAidInstruction::find($id);
 
         $data = [ 'instruction' => $instruction ];
 
