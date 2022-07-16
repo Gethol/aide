@@ -17,7 +17,9 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-/*Route::get('/user', [UsersController::class,'index']);*/
+Route::get('/', [UsersController::class,'index']);
+
+
 
 
 
