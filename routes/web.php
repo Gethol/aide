@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MedicalInformationController;
 use App\Http\Controllers\Auth\RedirectAuthenticatedUsersController;
 use App\Http\Controllers\EMTController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,12 @@ use App\Http\Controllers\EMTController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', [UsersController::class,'index']);
+
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 Route::get('/dashboard', function () {
     return view('dashboard');
