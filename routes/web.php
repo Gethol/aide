@@ -17,12 +17,9 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/', [UsersController::class,'index']);
+/*Route::get('/user', [UsersController::class,'index']);*/
 
-/*Route::get('/', function () {
-    return view('welcome');
-});
-*/
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -38,6 +35,8 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('/dashboard', function () {
             return view('admin.dashboard');
         })->name('dashboard');
+
+        Route::resource('firstAid', FirstAidController::class);
 
     });
 
