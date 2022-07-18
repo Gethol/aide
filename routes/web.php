@@ -8,6 +8,7 @@ use App\Http\Controllers\FirstAidController;
 use App\Http\Controllers\AmbulanceController;
 use App\Http\Controllers\UsersController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
