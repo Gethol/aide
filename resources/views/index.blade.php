@@ -18,7 +18,7 @@
       </div>
 
       <!--Menu Items-->
-      <div class="hidden md:flex  space-x-8">
+      <div class="hidden md:flex  space-x-8 ml-10">
         <a href="#" class="hover:text-darkGrayishBlue">Home</a>
         <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
         <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
@@ -26,7 +26,7 @@
       </div>
 
     <!--Button-->
-    <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightRedLight">Get Started</a>
+    <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Get Started</a>
 
     <!--Hamburger Icon-->
       <button
@@ -59,7 +59,7 @@
      <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
 
        <!--Left Item-->
-       <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+       <div class="flex flex-col mb-24 space-y-12 md:w-1/2">
           <h1 class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">Emergency Response services at the touch of a button</h1>
           <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">Peace of mind and safety wherever you go.
             24/7 services from the largest network of trusted medical, security, and roadside responders all 
@@ -77,10 +77,37 @@
      </div>
   </section>
 
+  <!--Who we are section-->
+
+  <section id="hero">
+    <!--Flex Container-->
+    <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mb-2 space-y-0 md:space-y-0">
+
+      <!--Left Item
+      <div class="md:w-1/2 pb-32 mr-10">
+      <img class="w-32 rounded-full" src="img/ambulance.jpg" alt=""/>
+      </div>
+-->
+      <!--Right Item: Image-->
+      <div class="flex flex-col space-y-10 md:w-1/2">
+
+         <div class="flex justify-center md:justify-start">
+           <a href="#" class="p-3 px-6 pt-2 text-white bg-brightYellow rounded-full  hover:bg-brightBlue">WHO ARE WE</a>
+         </div>
+
+         <p class="max-w-md text-4xl font-bold text-center md:text-4xl md:text-left">We are a Team with focus on providing Response from the best Emergency Providers</p>
+         <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">Provides premium emergency response services and coordination in partnership with Kenya's largest and most distributed network of emergency response professionals.</p>
+      </div>
+
+    </div>
+ </section>
+
+
+
   <!--Features section-->
   <section id="features">
     <!--Flex container-->
-    <h2 class="text-4xl pb-16 font-bold text-center text-brightBlue">
+    <h2 class="text-4xl mt-4 pb-16 font-bold text-center text-brightBlue">
       Our Main Features
     </h2>
     <div class="container flex flex-col px-4 mx-auto mt-2 space-y-12 md:space-y-0 md:flex-row">
@@ -88,31 +115,38 @@
       <!--our features-->
 
       <div class="flex flex-col space-y-12 md:w-1/2">
-        <div class="flex flex-col space-y-2">
-          <img class="w-20 h-20" src="img/siren.png" alt="">
+        <div class="flex flex-col space-y-0">
+          <div class="flex">
+            <img class="w-20 h-20" src="img/siren.png" alt="">
+            <h2 class="mt-10 font-bold">Contact Emergency Service Providers</h2>
+          </div>
+
           <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
             The website enables you to subscribe for emergency response from a top emergency response services. In the event of an emergency, your service provider will respond to you.
           </p>
         </div>
 
-        <div class="flex flex-col space-y-2">
-          <img class="w-20 h-20" src="img/callCenter.png" alt="">
+        <div class="flex flex-col space-y-0">
+          <div class="flex">
+            <img class="w-20 h-20" src="img/callCenter.png" alt="">
+            <h2 class="mt-10 font-bold">Inform your Emergency Contact</h2>
+          </div>
+
           <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
             In the case of an emergency, your family and friends can be informed about the current situation.
           </p>
         </div>
 
-        <div class="flex flex-col space-y-2">
-          <img class="w-20 h-20" src="img/FAkit.png" alt="">
+        <div class="flex flex-col space-y-0">
+          <div class="flex">
+            <img class="w-20 h-20" src="img/FAkit.png" alt="">
+            <h2 class="mt-10 font-bold">First Aid Instructions</h2>
+          </div>
+
           <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
             The website gives you a step-by-step guideline on how perform different First Aid techniques to provide assistance in the case of an emergency,
           </p>
         </div>
-
-        
-
-        
-        
       </div>
 
       <!--First Aid picture-->
@@ -179,19 +213,19 @@
   </section>
 
   <!--FOOTER-->
-  <footer class="bg-veryDarkBlue">
+  <footer class="bg-brightYellow">
     <!--Flex Container-->
     <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
       <!--Logo and Social media links container-->
       <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
 
-        <div class="mx-auto my-6 text-center text-white md:hidden">
+        <div class="mx-auto my-6 text-center text-black md:hidden">
           Copyright &copy; 2022, All Rights Reserved
         </div>        
 
         <!--logo-->
         <div>
-          //logo image
+          <img class="h-20" src="img/logo2-removebg-preview.png" alt="">
         </div>
 
         <!--Social Links Container-->
@@ -221,13 +255,13 @@
       
       <!--List Container-->
       <div class="flex justify-around space-x-32">
-        <div class="flex flex-col space-y-3 text-white">
+        <div class="flex flex-col space-y-3 text-black">
           <a href="#" class="hover:text-brightBlue">Home</a>
           <a href="#" class="hover:text-brightBlue">Pricing</a>
           <a href="#" class="hover:text-brightBlue">Products</a>
           <a href="#" class="hover:text-brightBlue">About</a>
         </div>
-        <div class="flex flex-col space-y-3 text-white">
+        <div class="flex flex-col space-y-3 text-black">
           <a href="#" class="hover:text-brightBlue">Careers</a>
           <a href="#" class="hover:text-brightBlue">Community</a>
           <a href="#" class="hover:text-brightBlue">Privacy Policy</a>
@@ -238,10 +272,10 @@
         <form action="#">
           <div class="flex space-x-3">
             <input type="text" class="flex-1 px-4 rounded-full focus:outline-none" placeholder="Updates in your inbox"/>
-            <button class="px-6 py-2 text-white rounded-full bg-brightBlue hover:bg-brightYellow focus:outline-none">Go</button>
+            <button class="px-6 py-2 text-white rounded-full bg-brightBlue hover:hover\:bg-brightBlue focus:outline-none">Go</button>
           </div>
         </form>
-        <div class="hidden text-white md:block">
+        <div class="hidden text-black md:block">
           Copyright &copy; 2022, All Rights Reserved
         </div>
 

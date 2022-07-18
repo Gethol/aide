@@ -22,7 +22,7 @@
 		@method('PUT')
 		@csrf
 
-		<legend class="mt-8 justify-self-center mb-10 font-bold text-2xl">Add Post</legend>
+		<legend class="text-4xl text-blue-900 font-bold mb-10 text-center">Add Post</legend>
 
 		<div class="mb-6 px-[25%] flex flex-col ">
 			<label>Title</label>

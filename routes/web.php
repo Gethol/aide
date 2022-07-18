@@ -5,6 +5,7 @@ use App\Http\Controllers\MedicalInformationController;
 use App\Http\Controllers\Auth\RedirectAuthenticatedUsersController;
 use App\Http\Controllers\EMTController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\FirstAidController;
 
 /*
 |--------------------------------------------------------------------------
