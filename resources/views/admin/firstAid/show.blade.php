@@ -73,12 +73,16 @@
 				<img class="px-[25%]" src="{{ $instruction->image }}" alt="">
 
 
-		<div class="mt-10 p-4 px-20 ml-20 rounded-lg border-2 border-black-100 blog-container flex flex-col  items-center text-sm">
-				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" id='heading'>Treatment</h2>
-			 <div class="container">
-			 {!! $instruction->treatment !!}
-			 </div>
-				
+			</div>
+			<div class="p-20 px-40 ml-40 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-lg">
+				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Signs And Symptoms</h2>
+				{!! $instruction->symptoms !!}
+			</div>
+
+			<div class="mt-10 p-20 px-40 ml-40 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-lg">
+				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Treatment</h2>
+				{!! $instruction->treatment !!}
+			</div>
 
 			<div>
 				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Media Links</h2>
