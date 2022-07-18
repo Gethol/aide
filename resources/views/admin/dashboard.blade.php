@@ -23,6 +23,18 @@
                 </a>
             </div>
 
+            <div>
+                                <a href="{{ route('admin.ambulance.index') }}">
+                    Medical Institutions    
+                </a>
+            </div>
+
+            <div>
+                                <a href="{{ route('admin.ambulance.create') }}">
+                    Add Emergency Medical Institution
+                </a>
+            </div>
+
         </div>
     </div>
 </x-app-layout>

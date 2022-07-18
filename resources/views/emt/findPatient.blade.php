@@ -37,7 +37,7 @@
 
 		@endif
 
-<p>{{$user->national_id}}</p>
+
     </div>
 
 
