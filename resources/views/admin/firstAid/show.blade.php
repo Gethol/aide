@@ -86,14 +86,15 @@
 			 {!! $instruction->treatment !!}
 			 </div>
 				
+
+			<div>
+				<h2 class="mt-6 mb-6 font-semibold text-lg text-black" >Media Links</h2>
 				<a href="{{ $instruction->video }}"> {{ $instruction->video }}</a>
 			</div>
 
-				
-
 		</div>
 
-
+</div>
 
 </body>
 </html>

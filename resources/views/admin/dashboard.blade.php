@@ -4,20 +4,6 @@
 		@section('title', 'Dashboard')
 
 		@section('pageTitle', 'Admin Dashboard')
-		<div class="user-wrapper">
-			<img src="img/avatar-anisha.png" alt="" width="40px" height="40px">
-		<div>
-             <div>{{ Auth::user()->firstName ." ". Auth::user()->secondName }}</div>
-			<form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
-		</div>
 
 		@section('content')
 
