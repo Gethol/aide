@@ -12,13 +12,19 @@
                     You're logged in as a Regular User! 
                 </div>
                 <div>
+                    <pre>
+                    <?php 
+                        print_r(session()->all());
+                    ?>
 
+                    @if(session()->get('med_info') == 1)
                     <a href="{{ route('medical-info.edit', Auth::id()) }}">Edit Medical Information</a>
                 </div>
-
+                    @else
                 <div>
-                    <a href="{{ route('medical-info.show', Auth::id()) }}">Medical Information</a>
+                    <a href="{{ route('medical-info.create') }}">Add Medical Information</a>
                 </div>
+                    @endif
 
             </div>
         </div>
