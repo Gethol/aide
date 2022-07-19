@@ -83,10 +83,17 @@
     <!--Flex Container-->
     <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mb-2 space-y-0 md:space-y-0">
 
-      <!--Left Item-->
+
+<!--       <div class="md:w-1/2 pb-32 mr-10">
+      <img class="w-32 rounded-full" src="img/ambulance.jpg" alt=""/>
+      </div> -->
+
+
+<!--       <!--Left Item-->
       <div class="md:w-1/2">
       <img class="object-contain w-32 rounded-full items-center" src="img/ambulance.jpg" alt=""/>
-      </div>
+      </div> -->
+
       <!--Right Item: Image-->
       <div class="flex flex-col space-y-10 md:w-1/2">
 
@@ -257,12 +264,10 @@
         <div class="flex flex-col space-y-3 text-black">
           <a href="#" class="hover:text-brightBlue">Home</a>
           <a href="#" class="hover:text-brightBlue">About</a>
-          <a href="#" class="hover:text-brightBlue">Community</a>
-        </div>
         <div class="flex flex-col space-y-3 text-black">
           <a href="#" class="hover:text-brightBlue">First Aid</a>
           <a href="#" class="hover:text-brightBlue">Ambulance Locations</a>
-          <a href="#" class="hover:text-brightBlue">Privacy Policy</a>
+
         </div>
       </div>
 

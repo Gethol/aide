@@ -13,9 +13,7 @@
                 </div>
                 <div>
                     <pre>
-                    <?php 
-                        print_r(session()->all());
-                    ?>
+
 
                     @if(session()->get('med_info') == 1)
                     <a href="{{ route('medical-info.edit', Auth::id()) }}">Edit Medical Information</a>

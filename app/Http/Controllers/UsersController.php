@@ -11,5 +11,9 @@ class UsersController extends Controller
         return view('index');
     }
 
+    public function view(){
+        return view('sign-up2');
+    }
+
 }
 

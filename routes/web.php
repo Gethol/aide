@@ -23,6 +23,7 @@ use App\Models\FirstAidInstruction;
 */
 
 Route::get('/', [UsersController::class,'index']);
+Route::get('/view', [UsersController::class,'view']);
 
 Route::get('/map', [GuestController::class, 'map'])->name('guest.map');
 Route::get('/firstAidInstructions', [GuestController::class, 'instructions'])->name('guest.firstAid.index');
