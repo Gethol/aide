@@ -7,6 +7,8 @@ use App\Http\Controllers\EMTController;
 use App\Http\Controllers\FirstAidController;
 use App\Http\Controllers\AmbulanceController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\GuestController;
+use App\Models\FirstAidInstruction;
 
 
 /*
@@ -22,6 +24,18 @@ use App\Http\Controllers\UsersController;
 
 Route::get('/', [UsersController::class,'index']);
 
+Route::get('/map', [GuestController::class, 'map'])->name('guest.map');
+Route::get('/firstAidInstructions', [GuestController::class, 'instructions'])->name('guest.firstAid.index');
+Route::get('aid/{id}', function($id){
+
+    $instruction = FirstAidInstruction::find($id);
+
+    $data = [ 'instruction' => $instruction ];
+
+    return view('singleFirstAidInstruction',$data);       
+    
+});
+
 
 
 
@@ -29,6 +43,9 @@ Route::get('/', [UsersController::class,'index']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+
+
 
 
 Route::group(['middleware' => 'auth'], function() {

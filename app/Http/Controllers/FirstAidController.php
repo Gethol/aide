@@ -66,7 +66,7 @@ class FirstAidController extends Controller
             } catch (Exception $e) {
                 report($e);
             }
-            $img_location = 'img/firstAidIndtructions'.$fileName;
+            $img_location = 'img/firstAidIndtructions/'.$fileName;
 
             $entry = new FirstAidInstruction;
 
@@ -159,8 +159,8 @@ class FirstAidController extends Controller
                 report($e);
             }
             
-            $img_location = 'images/blog/'.$fileName;
-            $entry->image = $fileName;
+            $img_location = 'images/firstAidIndtructions/'.$fileName;
+            $entry->image = $img_location;
 
         }
 
