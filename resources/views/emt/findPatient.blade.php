@@ -1,16 +1,17 @@
-@extends('layouts.emt')
-
-@section('title', 'find Patient')
-
-		@section('pageTitle', 'find Patient')
-
-		@section('content')
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
 	<div>
     	<form action="{{ route('emt.findPatient') }}" id="search-form" method="post">
     		@csrf
-    		<input class="mb-6 mt-10 space-x-2  p-3 px-6 pt-2 text-white  w-72 rounded-full baseline font-semibold text-center justify-center" type="search" name="search" placeholder="Enter National ID" id="search">
-
-    		<input class="mb-6 space-x-2  p-2 px-4 ml-4 pt-2 text-white bg-brightYellow w-20 rounded-full mt-10 baseline hover:bg-brightBlue font-semibold text-center justify-center" type="submit" value="send">
+    		<input type="search" name="search" placeholder="Enter National ID" id="search">
+    		<input type="submit">
     	</form>
 
     </div>
@@ -29,11 +30,18 @@
 
 		print_r($user);
 
+
+		
 		?>
 		</pre>
 
 		@endif
 
+
     </div>
 
-@endsection
+
+</body>
+</html>
+
+
