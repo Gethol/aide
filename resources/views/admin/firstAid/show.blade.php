@@ -65,37 +65,36 @@
   </script>
 </head>
 <body class="font-poppins" >
+
+<h1 class="text-4xl text-brightYellow font-bold mb-10 ml-32 mt-10 text-center">{{ $instruction->title }}</h1>
 	
+<div class="container flex flex-col px-8 mx-auto mt-2 space-y-8 md:space-y-0 md:flex-row">
 
-	<div class="flex flex-col p-20 w-[80%]">
-			<h1 class="text-4xl text-brightYellow font-bold mb-10 ml-32 text-center">{{ $instruction->title }}</h1>
-			<div>
-				<img class="px-[25%]" src="{{ $instruction->image }}" alt="">
-
-
-			</div>
-			<div class="p-20 px-40 ml-40 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-lg">
-				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Signs And Symptoms</h2>
+	<div class="flex flex-col w-[50%]">
+	
+	 
+		 <div class="p-2 px-10 ml-2 rounded-lg border-2 border-black-100 blog-container bg-brightBlue items-center text-sm">
+		 <h2 class="mt-6 mb-6 font-semibold text-black">Signs And Symptoms</h2>
 				{!! $instruction->symptoms !!}
-			</div>
+		 </div>
 
-			<div class="mt-10 p-20 px-40 ml-40 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-lg">
+	</div>
+
+		<div class="mt-10 p-4 px-20 ml-20 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-md">
 				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Treatment</h2>
-				{!! $instruction->treatment !!}
-			</div>
+			 <div class=" bg-brightBlue">
+			 {!! $instruction->treatment !!}
+			 </div>
+				
 
 			<div>
-				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Media Links</h2>
- 
-				
+				<h2 class="mt-6 mb-6 font-semibold text-lg text-black" >Media Links</h2>
 				<a href="{{ $instruction->video }}"> {{ $instruction->video }}</a>
 			</div>
 
-				
-
 		</div>
 
-
+</div>
 
 </body>
 </html>

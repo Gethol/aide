@@ -21,8 +21,8 @@
       <div class="hidden md:flex  space-x-8 ml-10">
         <a href="#" class="hover:text-darkGrayishBlue">Home</a>
         <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
-        <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
-        <a href="#" class="hover:text-darkGrayishBlue">Community</a>
+        <a href="#" class="hover:text-darkGrayishBlue">First Aid Instructions</a>
+        <a href="#" class="hover:text-darkGrayishBlue">Ambulance Locations</a>
       </div>
 
     <!--Button-->
@@ -46,9 +46,9 @@
         class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
       >
         <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Careers</a>
-        <a href="#">Community</a>
+        <a href="#aboutUs">About Us</a>
+        <a href="#">First Aid Instructions</a>
+        <a href="#">Ambulance Locations</a>
       </div>
     </div>
   </nav>
@@ -56,7 +56,7 @@
   <!--Hero Section-->
   <section id="hero">
      <!--Flex Container-->
-     <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
+     <div id= "aboutUs" class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
 
        <!--Left Item-->
        <div class="flex flex-col mb-24 space-y-12 md:w-1/2">
@@ -83,11 +83,10 @@
     <!--Flex Container-->
     <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mb-2 space-y-0 md:space-y-0">
 
-      <!--Left Item
-      <div class="md:w-1/2 pb-32 mr-10">
-      <img class="w-32 rounded-full" src="img/ambulance.jpg" alt=""/>
+      <!--Left Item-->
+      <div class="md:w-1/2">
+      <img class="object-contain w-32 rounded-full items-center" src="img/ambulance.jpg" alt=""/>
       </div>
--->
       <!--Right Item: Image-->
       <div class="flex flex-col space-y-10 md:w-1/2">
 
@@ -257,13 +256,12 @@
       <div class="flex justify-around space-x-32">
         <div class="flex flex-col space-y-3 text-black">
           <a href="#" class="hover:text-brightBlue">Home</a>
-          <a href="#" class="hover:text-brightBlue">Pricing</a>
-          <a href="#" class="hover:text-brightBlue">Products</a>
           <a href="#" class="hover:text-brightBlue">About</a>
+          <a href="#" class="hover:text-brightBlue">Community</a>
         </div>
         <div class="flex flex-col space-y-3 text-black">
-          <a href="#" class="hover:text-brightBlue">Careers</a>
-          <a href="#" class="hover:text-brightBlue">Community</a>
+          <a href="#" class="hover:text-brightBlue">First Aid</a>
+          <a href="#" class="hover:text-brightBlue">Ambulance Locations</a>
           <a href="#" class="hover:text-brightBlue">Privacy Policy</a>
         </div>
       </div>
