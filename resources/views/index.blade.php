@@ -89,10 +89,10 @@
       </div> -->
 
 
-<!--       <!--Left Item-->
-      <div class="md:w-1/2">
-      <img class="object-contain w-32 rounded-full items-center" src="img/ambulance.jpg" alt=""/>
-      </div> -->
+ <!--Left Item-->
+<div class="md:w-1/2 space-y-10">
+      <img class="object-contain w-20 rounded-full items-center" src="img/ambulance.jpg" alt=""/>
+</div> 
 
       <!--Right Item: Image-->
       <div class="flex flex-col space-y-10 md:w-1/2">
@@ -101,19 +101,17 @@
            <a href="#" class="p-3 px-6 pt-2 text-white bg-brightYellow rounded-full  hover:bg-brightBlue">WHO ARE WE</a>
          </div>
 
-         <p class="max-w-md text-4xl font-bold text-center md:text-4xl md:text-left">We are a Team with focus on providing Response from the best Emergency Providers</p>
-         <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">Provides premium emergency response services and coordination in partnership with Kenya's largest and most distributed network of emergency response professionals.</p>
+         <p class="max-w-md text-3xl font-bold text-center md:text-4xl md:text-left">We are a Team with focus on providing Response from the best Emergency Providers</p>
+         <p class="max-w-sm pb-16 text-center text-darkGrayishBlue md:text-left">Provides premium emergency response services and coordination in partnership with Kenya's largest and most distributed network of emergency response professionals.</p>
       </div>
 
     </div>
  </section>
 
-
-
   <!--Features section-->
   <section id="features">
     <!--Flex container-->
-    <h2 class="text-4xl mt-4 pb-16 font-bold text-center text-brightBlue">
+    <h2 class="text-4xl mt-8 pb-8 font-bold text-center text-brightBlue">
       Our Main Features
     </h2>
     <div class="container flex flex-col px-4 mx-auto mt-2 space-y-12 md:space-y-0 md:flex-row">

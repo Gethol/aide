@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://fontawesome.com/">
 	<link rel="stylesheet" href="https://fontawesome.com/v4.7/icons/">
 
-
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <input type="checkbox" id="nav-toggle">

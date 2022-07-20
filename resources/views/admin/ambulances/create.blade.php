@@ -6,36 +6,79 @@
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 
 <style>
-body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
-</head>
+body{
+	position: relative;
+	display: absolute;
+}
+#map {width: 50%; }
 
-<body>
- 
-<style>
 #geocoder-container > div {
 min-width: 50%;
 margin-left: 25%;
 }
+.mb-6{
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 7px;
+  letter-spacing: 1px;  
+	margin-left: 100px;
+}
+.mb-6 input{
+	height: 100%;
+  width: 300px;
+  border: black;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+	outline-style: solid;
+	padding: 10px;
+}
+.button{
+	height: 50px;
+  width: 150px;
+  border: black;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 15px;
+	padding: 10px;
+	background: linear-gradient(135deg, #0099FF,#FFCC00);
+	text-align: center;
+	margin-left: 160px;
+}
+
+.mt-8{
+	display:flex;
+}
+body h2{
+	font-size: 25px;
+  font-weight: 500;
+  position: relative;
+	text-align: center;
+}
+
+}
+
+
 </style>
 
+</head>
 
+<body>
+	<h2>Add Ambulance Location</h2>
+ 
 
-<div class="flex flex-col">
+<div class="mt-8">
 <div id="map" style="width: 50%; height:75vh;"></div>
 
 
-
-
-<div class="mt-8" style="margin-top: 40%;">
+<div class="mt-8">
 	<form action="{{ route('admin.ambulance.store') }}" method="POST" >
 		@csrf
 
@@ -57,7 +100,7 @@ margin-left: 25%;
 		<div class="mb-6">
 			<input type="hidden" value="" name="longitude" placeholder="Enter longitude" id="longitude">
 		</div>
-		<div class="mb-6">
+		<div class="button">
 			<input type="submit" name="submit" value="Submit">
 		</div>
 

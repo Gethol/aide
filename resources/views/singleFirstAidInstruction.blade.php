@@ -15,6 +15,26 @@
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 	<title>Instructions</title>
+	<style>
+
+		.container p{
+			margin-bottom: 20px;
+			
+		}
+		.container img{
+			width: 350px;
+			height: 350px;
+			margin-left: 100px;
+			margin-bottom: 40px;
+			margin-top: 10px;
+			border-radius: 10px;
+			border: black;
+			
+
+		}
+
+	</style>
+
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
     tailwind.config = {
@@ -42,37 +62,80 @@
   </script>
 </head>
 <body class="font-poppins" >
+
+<!--Navbar-->
+<nav class="relative container mx-auto p-6">
+    <!--Flex container-->
+    <div class="flex items-center justify-between">
+      
+
+      <!--Menu Items-->
+      <div class="hidden md:flex  space-x-8 ml-10">
+        <a href="#" class="hover:text-darkGrayishBlue">Home</a>
+        <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
+        <a href="#" class="hover:text-darkGrayishBlue">First Aid Instructions</a>
+        <a href="#" class="hover:text-darkGrayishBlue">Ambulance Locations</a>
+      </div>
+
+    <!--Button-->
+    <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Get Started</a>
+
+    <!--Hamburger Icon-->
+      <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden">
+      <div
+        id="menu"
+        class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+      >
+        <a href="#">Home</a>
+        <a href="#aboutUs">About Us</a>
+        <a href="#">First Aid Instructions</a>
+        <a href="#">Ambulance Locations</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+<h1 class="text-4xl text-brightYellow font-bold mb-10 ml-32 mt-10 text-center">{{ $instruction->title }}</h1>
 	
+<div class="container flex flex-col px-8 mx-auto mt-2 space-y-8 md:space-y-0 md:flex-row">
 
-	<div class="flex flex-col p-20 w-[80%]">
-			<h1 class="text-4xl text-brightYellow font-bold mb-10 ml-32 text-center">{{ $instruction->title }}</h1>
-			<div>
-				<img class="px-[25%]" src="{{ $instruction->image }}" alt="">
-
-
-			</div>
-			<div class="p-20 px-40 ml-40 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-lg">
-				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Signs And Symptoms</h2>
+	<div class="flex flex-col w-[50%]">
+	
+	 
+		 <div class="p-2 px-10 ml-2 rounded-lg border-2 border-black-100 blog-container bg-brightBlue items-center text-sm">
+		 <h2 class="mt-6 mb-6 font-semibold text-black">Signs And Symptoms</h2>
 				{!! $instruction->symptoms !!}
-			</div>
+		 </div>
 
-			<div class="mt-10 p-20 px-40 ml-40 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-lg">
+	</div>
+
+		<div class="mt-10 p-4 px-20 ml-20 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-sm">
 				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Treatment</h2>
-				{!! $instruction->treatment !!}
-			</div>
+			 <div class="container">
+			 {!! $instruction->treatment !!}
+			 </div>
+				
 
 			<div>
-				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Media Links</h2>
- 
-				
+				<h2 class="mt-6 mb-6 font-semibold text-lg text-black" >Media Links</h2>
 				<a href="{{ $instruction->video }}"> {{ $instruction->video }}</a>
 			</div>
 
-				
-
 		</div>
 
-
+</div>
 
 </body>
 </html>
