@@ -41,6 +41,17 @@
 	    padding: 0;
 	    -webkit-font-smoothing: antialiased;
 	  }
+
+		body h3{
+		font-size: 15px;
+  	font-weight: 700;
+  	position: relative;
+		text-align: center;
+		color: #0099FF;
+		padding-top: 10px;
+}
+		
+
 	#map { position: absolute; top: 0; margin-left: 20%; bottom: 0; width: 100%; }
 
 		.listings {
