@@ -108,8 +108,6 @@
     </div>
  </section>
 
-
-
   <!--Features section-->
   <section id="features">
     <!--Flex container-->

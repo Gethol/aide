@@ -80,6 +80,7 @@
     <!--Button-->
     <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Get Started</a>
 
+
     <!--Hamburger Icon-->
       <button
           id="menu-btn"
@@ -118,8 +119,11 @@
 		 <h2 class="mt-6 mb-6 font-semibold text-black">Signs And Symptoms</h2>
 				{!! $instruction->symptoms !!}
 		 </div>
+     <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Edit</a>
 
+      <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Delete</a>
 	</div>
+  
 
 		<div class="mt-10 p-4 px-20 ml-20 rounded-lg border-2 border-black-100 blog-container bg-LightGray flex flex-col  items-center text-sm">
 				<h2 class="mt-6 mb-6 font-semibold text-brightBlue" >Treatment</h2>
@@ -132,6 +136,8 @@
 				<h2 class="mt-6 mb-6 font-semibold text-lg text-black" >Media Links</h2>
 				<a href="{{ $instruction->video }}"> {{ $instruction->video }}</a>
 			</div>
+
+      
 
 		</div>
 

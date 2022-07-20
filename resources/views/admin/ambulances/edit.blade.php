@@ -13,46 +13,86 @@
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 
 <style>
-body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
-</head>
+body{
+	position: relative;
+	display: absolute;
+}
+#map {width: 50%; }
 
-<body>
- 
-<style>
 #geocoder-container > div {
 min-width: 50%;
 margin-left: 25%;
 }
+.mb-6{
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 7px;
+  letter-spacing: 1px;  
+	margin-left: 100px;
+	display: flex;
+	flex-direction: column;
+}
+.mb-6 input{
+	height: 100%;
+  width: 225px;
+  border: black;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+	outline-style: solid;
+	padding: 8px;
+}
+body a{
+	height: 50px;
+  width: 150px;
+  border: black;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 15px;
+	padding: 10px;
+	background: linear-gradient(135deg, #0099FF,#FFCC00);
+	text-align: center;
+	margin-left: 160px;
+}
+
+.mt-8{
+	display:flex;
+}
+body h2{
+	font-size: 25px;
+  font-weight: 500;
+  position: relative;
+	text-align: center;
+}}
+
+.buttons{
+	display: flex;
+}
 </style>
 
-
-
-<div class="flex flex-col">
+</head>
+<body>
+	<h2>Add Ambulance Location</h2>
+ 
+<div class="mt-8">
 <div id="map" style="width: 50%; height:75vh;"></div>
 
-
-
-
-
-
-<div class="mt-8" style="margin-top: 40%;">
+<div class="mt-8">
 	<form action="{{ route('admin.ambulance.update',  $institution->id ) }}" method="POST" >
 		@csrf
 		@method('put')
 
-		<div class="mb-6 flex flex-col">
+		<div class="mb-6">
 			<label>Institution Name</label>
 			<input type="text" placeholder="Enter Institution Name" name="name" id="name" value="{{ $institution->name }}">
 		</div>
 
-		<div class="mb-6 flex flex-col">
+		<div class="mb-6">
 			<label>Number of Ambulances</label>
 			<input type="number" name="ambulances" id="ambulances" placeholder="Enter the number of ambulances" value="{{ $institution->ambulances }}">
 		</div>
 
-		<div class="mb-6 flex flex-col">
+		<div class="mb-6">
 			<label>Contact</label>
 			<input type="tel" name="contact" id="contact" placeholder="Enter Contact" value="">
 		</div>
@@ -63,10 +103,12 @@ margin-left: 25%;
 		<div class="mb-6">
 			<input type="hidden" value="" name="longitude" placeholder="Enter longitude" id="longitude" value="{{ json_decode($institution->location)->longitude }}">
 		</div>
-		<div class="mb-6">
-			<input type="submit" name="submit" value="Submit">
-		</div>
-
+<div class="buttons">
+     
+			<input  type="submit" name="submit" value="Submit">
+			
+			<a href="#" >Delete</a>
+</div>
 		<div class="mb-6"></div>
 	</form>
 </div>
