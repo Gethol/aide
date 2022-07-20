@@ -51,7 +51,7 @@ Route::get('/dashboard', function () {
 
 Route::group(['middleware' => 'auth'], function() {
 
-    Route::get("/redirectAuthenticatedUsers", [RedirectAuthenticatedUsersController::class, "index"]);
+    Route::get("/redirectAuthenticatedUsers", [RedirectAuthenticatedUsersController::class, "index"])->name('redirect');
 
     Route::name('admin.')->prefix('admin')->middleware('checkRole:admin')->group(function() {
 
@@ -61,6 +61,8 @@ Route::group(['middleware' => 'auth'], function() {
 
         Route::resource('firstAid', FirstAidController::class);
         Route::resource('ambulance', AmbulanceController::class);
+        Route::view('/firstAidHome', 'admin.firstAid.home')->name('firstAid.home');
+        Route::view('/ambulanceHome', 'admin.ambulances.home')->name('ambulance.home');
 
 
     });
@@ -70,6 +72,8 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('/dashboard', function () {
             return view('dashboard');
         })->name('dashboard');
+
+
 
         Route::resource('medical-info', MedicalInformationController::class);
 

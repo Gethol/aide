@@ -99,9 +99,9 @@
 
 		</div>
 
-		<p>Chat </p>
+
 		<div>
-			<input class="mb-6 flex space-x-2 md:block p-3 px-6 pt-2 text-white bg-brightYellow w-60 rounded-full baseline hover:bg-brightBlue font-semibold text-center justify-center" type="submit" name="submit" id="submit" value="Add Post">
+			<input class="mb-6 flex space-x-2 md:block p-3 px-6 pt-2 text-white bg-brightYellow w-60 rounded-full baseline hover:bg-brightBlue font-semibold text-center justify-center" type="submit" name="submit" id="submit" value="Entry">
 		</div>
 
 	</form>

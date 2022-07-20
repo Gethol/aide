@@ -71,6 +71,7 @@ class MedicalInformationController extends Controller
 
        if($medInfo)
         {   
+            session(['med_info' => '1']);
             return redirect()->route('dashboard');
         }else{
             return redirect()->back()->with('status', 'Medical Information Failed');

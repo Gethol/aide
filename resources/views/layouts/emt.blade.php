@@ -58,7 +58,7 @@
 		</li>
 
 		<li>
-			<a href=""><span><i class="fa fa-users" aria-hidden="true"></i></span>
+			<a href="{{ route('emt.findPatient') }}"><span><i class="fa fa-users" aria-hidden="true"></i></span>
 				<span>Find Patients</span></a>
 		</li>
 
@@ -89,7 +89,7 @@
 		<div class="user-wrapper">
 			<img src="img/avatar-anisha.png" alt="" width="40px" height="40px">
 		<div>
-			<h4>Ariana Grande</h4>
+			<h4>{{Auth::user()->firstName. " ". Auth::user()->secondName}}</h4>
       <form method="POST" action="{{ route('logout') }}">
                             @csrf
 

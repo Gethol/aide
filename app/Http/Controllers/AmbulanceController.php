@@ -34,6 +34,7 @@ class AmbulanceController extends Controller
                 "id" => $institution->id,
                 "name" => $institution->name,
                 "ambulances" => $institution->ambulances,
+                "contact" => $institution->contact,
             ],
 
         ];
@@ -156,6 +157,7 @@ class AmbulanceController extends Controller
                 "id" => $institution->id,
                 "name" => $institution->name,
                 "ambulances" => $institution->ambulances,
+                "contact" => $institution->contact,
             ],
         ];
 
@@ -219,6 +221,17 @@ class AmbulanceController extends Controller
     public function destroy($id)
     {
         //
+        $entry = MedicalInstitution::find($id);
+ 
+        $entry->delete();
+
+
+            if($entry){
+                return redirect()->route('admin.firstAid.index')->with('status', 'Post Deleted');
+            }else{
+                return redirect()->back()->with('status', 'Post Deletion Failed');
+            }
+
     }
         
 }
