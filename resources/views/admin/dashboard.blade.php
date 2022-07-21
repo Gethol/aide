@@ -14,15 +14,7 @@
                     You're logged in as an Admin! 
                 </div>
             </div>
-            <div>
-                <a href="{{ route('admin.firstAid.index') }}">All First Aid Information </a>
-            </div>
 
-            <div>
-                                <a href="{{ route('admin.firstAid.create') }}">
-                    Add First Aid Information
-                </a>
-            </div>
 
         </div>
   </div>

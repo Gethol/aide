@@ -58,14 +58,11 @@
 		</li>
 
 		<li>
-			<a href="{{ route('emt.findPatient') }}"><span><i class="fa fa-users" aria-hidden="true"></i></span>
+			<a  class ="active" href="{{ route('emt.findPatient') }}"><span><i class="fa fa-users" aria-hidden="true"></i></span>
 				<span>Find Patients</span></a>
 		</li>
 
-		<li>
-			<a href=""><span><i class="fa fa-clipboard" aria-hidden="true"></i></span>
-				<span>LINK 3</span></a>
-		</li>
+
 
 		
 

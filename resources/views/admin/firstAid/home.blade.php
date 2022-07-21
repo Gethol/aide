@@ -6,16 +6,24 @@
 		@section('pageTitle', 'First Aid Instructions')
 
 		@section('content')
-
-			<div>
-                <a href="{{ route('admin.firstAid.index') }}">All First Aid Information </a>
+        <div class="flex">
+			<a href="{{ route('admin.firstAid.index') }}">
+            <div class="border border-solid p-16 m-4 h-[350px] w-[350px]">
+                <img src="{{ asset('img/pharmacy.png') }}">
+                All First Aid Information
             </div>
+             </a>
 
-            <div>
-                                <a href="{{ route('admin.firstAid.create') }}">
+
+            <a href="{{ route('admin.firstAid.create') }}">
+            <div class="border border-solid p-16 m-4 h-[350px] w-[350px]">
+                <img src="{{ asset('img/first-aid-kit.png') }}">
+                                
                     Add First Aid Information
-                </a>
+                
             </div>
+            </a>
+        </div>
 
 
 

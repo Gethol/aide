@@ -1,49 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Display&display=swap" rel="stylesheet">
+@extends('layouts.admin')
+@section('title', 'Add Entry')
+@section('pageTitle', 'Add Entry')
+@section('content')
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script>
-    tailwind.config = {
-      theme: {
-        extend: {
-					fontFamily:{
-						poppins:"'Poppins',serif",
-					},
-          colors: {
-        brightBlue: 'hsla(204, 100%, 50%, 1)',
-        brightYellow: 'hsla(48, 100%, 50%, 1)',
-        brightRed: 'hsl(12, 88%, 59%)',
-        brightRedLight: 'hsl(12, 88%, 69%)',
-        brightRedSupLight: 'hsl(12, 88%, 95%)',
-        darkBlue: 'hsl(228, 39%, 23%)',
-        darkGrayishBlue: 'hsl(227, 12%, 61%)',
-        veryDarkBlue: 'hsl(233, 12%, 13%)',
-        veryPaleRed: 'hsl(13, 100%, 96%)',
-        veryLightGray: 'hsl(0, 0%, 98%)',
-				LightGray: 'hsl(0, 0%, 90%)',
-          }
-        }
-      }
-    }
-  </script>
-	<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
-	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-	
-
-
-	<title>Add Post</title>
-</head>
-<body class="font-poppins">
 	<div class="w-full">
 	<form method="POST" action="{{ route('admin.firstAid.store') }}" class=" m-8 flex flex-col  bg-LightGray shadow-md rounded-lg px-8 pt-6 pb-8" enctype="multipart/form-data">
 		@csrf
@@ -131,10 +90,7 @@
                 } );
 
 
-    $(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-		});
+
 </script>
 
-</body>
-</html>
+@endsection

@@ -6,16 +6,21 @@
 		@section('pageTitle', 'First Aid Instructions')
 
 		@section('content')
-
-			<div>
-                <a href="{{ route('admin.ambulance.index') }}">Map Preview</a>
+        <div class=" flex justify-center">
+			<a href="{{ route('admin.ambulance.index') }}">
+            <div class="border border-solid p-16 m-4 h-[350px] w-[350px]">
+                <img  src="{{ asset('img/pin.png') }}">
+                Map Preview
             </div>
-
-            <div>
-                                <a href="{{ route('admin.ambulance.create') }}">
+        </a>
+            <a href="{{ route('admin.ambulance.create') }}"><div class="border border-solid p-16 m-4 h-[350px] w-350px]">
+                <img src="{{ asset('img/ambulance(3).png') }}">
+                                
                     Add Ambulance Locations
-                </a>
+              
             </div>
+              </a>
+        </div>
 
 
 		

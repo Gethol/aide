@@ -17,21 +17,53 @@
 
 
 
-    <div id="search-results">
-		<p>Search Results</p>
+
+
+<table class="shadow-lg bg-white">
+  <tr>
+    <th class="bg-blue-100 border text-left px-8 py-4">National ID</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Name</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Emergency Contact</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Emergency Contact</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Birthdate</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">BloodType</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Medical Conditions</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Allergies</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Other</th>
+  
+
+  </tr>
+  @if(!empty($user))
+    <tr>
+ 		<td class="border px-8 py-4">{{ $user->national_id }}</td>
+    	<td class="border px-8 py-4">{{ $user->firstName . " ". $user->secondName }} </td>
+  		<td class="border px-8 py-4">{{ $user->emergency_contact_name }}</td>
+    	<td class="border px-8 py-4">{{ $user->emergency_contact }}</td>
+    	<td class="border px-8 py-4">{{ $user->yob }}</td>
+    	<td class="border px-8 py-4">{{ $user->blood_type }}</td>
+  		<td class="border px-8 py-4">{{ $user->medical_conditions }}</td>
+  		<td class="border px-8 py-4">{{ $user->allergies }}</td>
+  		<td class="border px-8 py-4">{{ $user->other }}</td>
+	
+    </t>
+   @else
+   <tr>
+   				<td class="border px-8 py-4 bg-white" colspan="9">No User Found</td>
+   </tr>
+
+   @endif
+
+</table>
+
+
+
+
 
 		@if(empty($user))
 
-		<p>No User Found</p>
+
 		@else
-		<pre>
-		<?php
-
-		print_r($user);
-
-		?>
-		</pre>
-
+		
 		@endif
 
     </div>

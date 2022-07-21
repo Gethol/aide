@@ -28,7 +28,7 @@ class RedirectAuthenticatedUsersController extends Controller
            
             session(['med_info' => $data]);
 
-            return redirect('/dashboard');
+            return redirect('/');
         }
         elseif(auth()->user()->role == 'emt'){
             return redirect('/emt/dashboard');

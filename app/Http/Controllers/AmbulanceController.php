@@ -157,7 +157,7 @@ class AmbulanceController extends Controller
         ];        
 
 
-        return view('admin.ambulances.edit')->with($data);
+        return view('admin.ambulances.edit2')->with($data);
     }
 
     /**

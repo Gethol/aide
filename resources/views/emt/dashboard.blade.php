@@ -12,18 +12,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in as an EMT! 
                 </div>
-                <div>
-                    <a href="{{ route('emt.findPatient') }}">
-                        Find Patient
-                    </a>
-
-        <div class="search-wrapper w-10">
-			<span>
-				<i class="fas fa-search"></i>
-			</span>
-			<input type="search" placeholder="Search Here" />
-		</div>
-                </div>
+               
             </div>
         </div>
     </div>

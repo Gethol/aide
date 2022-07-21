@@ -51,7 +51,7 @@
                             </x-dropdown-link>
       </form>
 
-                
+
 
             </div>
 
@@ -100,7 +100,18 @@
             over Kenya.</p>
 
           <div class="flex justify-center md:justify-start">
-            <a href="#" class="p-3 px-6 pt-2 text-white bg-brightYellow rounded-full  hover:bg-brightBlue">Get Started</a>
+            @if(!Auth::check())
+            <a href="{{ route('login') }}" class="p-3 px-6 pt-2 text-white bg-brightYellow rounded-full  hover:bg-brightBlue">Get Started</a>
+            @else
+                 @if(session()->get('med_info') == 1)
+                    <a href="{{ route('medical-info.edit', Auth::id()) }}" class="p-3 px-6 pt-2 text-white bg-brightYellow rounded-full  hover:bg-brightBlue">Edit Medical Information</a>
+                
+                    @else
+               
+                    <a href="{{ route('medical-info.create') }} "class="p-3 px-6 pt-2 text-white bg-brightYellow rounded-full  hover:bg-brightBlue">Add Medical Information</a>
+                
+                    @endif
+            @endif
           </div>
        </div>
 
@@ -118,15 +129,15 @@
     <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mb-2 space-y-0 md:space-y-0">
 
 
-<!--       <div class="md:w-1/2 pb-32 mr-10">
+      <div class="md:w-1/2 pb-32 mr-10">
       <img class="w-32 rounded-full" src="img/ambulance.jpg" alt=""/>
-      </div> -->
+      </div>
 
 
  <!--Left Item-->
-<div class="md:w-1/2 space-y-10">
+<!-- <div class="md:w-1/2 space-y-10">
       <img class="object-contain w-20 rounded-full items-center" src="img/ambulance.jpg" alt=""/>
-</div> 
+</div>  -->
 
       <!--Right Item: Image-->
       <div class="flex flex-col space-y-10 md:w-1/2">
