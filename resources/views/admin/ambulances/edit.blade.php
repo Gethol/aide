@@ -42,7 +42,7 @@ margin-left: 25%;
 	outline-style: solid;
 	padding: 8px;
 }
-body a{
+/*body a{
 	height: 50px;
   width: 150px;
   border: black;
@@ -53,7 +53,9 @@ body a{
 	background: linear-gradient(135deg, #0099FF,#FFCC00);
 	text-align: center;
 	margin-left: 160px;
-}
+}*/
+
+
 
 .mt-8{
 	display:flex;
@@ -63,10 +65,36 @@ body h2{
   font-weight: 500;
   position: relative;
 	text-align: center;
-}}
+}
 
 .buttons{
 	display: flex;
+}
+
+.buttons input{
+	height: 50px;
+  width: 150px;
+  border: black;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 15px;
+	padding: 10px;
+	background: linear-gradient(135deg, #0099FF,#FFCC00);
+	text-align: center;
+	margin-left: 40px;
+}
+
+.buttons a{
+	height: 50px;
+  width: 150px;
+  border: black;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 15px;
+	padding: 10px;
+	background: linear-gradient(135deg, #0099FF,#FFCC00);
+	text-align: center;
+	margin-left: 50px;
 }
 </style>
 
@@ -105,11 +133,12 @@ body h2{
 		</div>
 <div class="buttons">
      
-			<input  type="submit" name="submit" value="Submit">
+<input  type="submit" name="submit" value="Submit">
 			
-			<a href="#" >Delete</a>
+<a href="#" >Delete</a>
 </div>
-		<div class="mb-6"></div>
+
+	
 	</form>
 </div>
 @if ($errors->any())
