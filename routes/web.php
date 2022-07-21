@@ -60,7 +60,7 @@ Route::group(['middleware' => 'auth'], function() {
         })->name('dashboard');
 
         Route::resource('firstAid', FirstAidController::class);
-        Route::resource('ambulance', AmbulanceController::class);
+        Route::resource('ambulance', AmbulanceController::class)->except(['show']);
         Route::view('/firstAidHome', 'admin.firstAid.home')->name('firstAid.home');
         Route::view('/ambulanceHome', 'admin.ambulances.home')->name('ambulance.home');
 

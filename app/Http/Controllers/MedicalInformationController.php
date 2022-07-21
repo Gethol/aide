@@ -72,7 +72,7 @@ class MedicalInformationController extends Controller
        if($medInfo)
         {   
             session(['med_info' => '1']);
-            return redirect()->route('dashboard');
+            return redirect('/');
         }else{
             return redirect()->back()->with('status', 'Medical Information Failed');
         }
@@ -154,7 +154,7 @@ class MedicalInformationController extends Controller
         if($info)
         {
 
-            return redirect()->route('dashboard');
+            return redirect('/');
         }else{
             return redirect()->back()->with('status', 'Update Failed');
         }  
