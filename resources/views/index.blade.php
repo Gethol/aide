@@ -20,14 +20,48 @@
       <!--Menu Items-->
       <div class="hidden md:flex  space-x-8 ml-10">
         <a href="#" class="hover:text-darkGrayishBlue">Home</a>
-        <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
-        <a href="#" class="hover:text-darkGrayishBlue">First Aid Instructions</a>
-        <a href="#" class="hover:text-darkGrayishBlue">Ambulance Locations</a>
+        <a href="#aboutUs" class="hover:text-darkGrayishBlue">About Us</a>
+        <a href="{{ route('guest.firstAid.index') }}" class="hover:text-darkGrayishBlue">First Aid Instructions</a>
+        <a href="{{ route('guest.map') }}" class="hover:text-darkGrayishBlue">Ambulance Locations</a>
       </div>
 
     <!--Button-->
-    <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Get Started</a>
+    @if(Auth::check())
+    <div class="flex flex-col">
+    
 
+        <button class="bg-BrightBlue p-2">{{  '' .Auth::user()->firstName. " ". Auth::user()->secondName }}</button>
+                                <div>                   
+
+                    @if(session()->get('med_info') == 1)
+                    <a href="{{ route('medical-info.edit', Auth::id()) }}">Edit Medical Information</a>
+                </div>
+                    @else
+                <div>
+                    <a href="{{ route('medical-info.create') }}">Add Medical Information</a>
+                </div>
+                    @endif
+                      <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                      <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+      </form>
+
+                
+
+            </div>
+
+      
+
+
+
+    @else
+    <a href="{{ route('login') }}" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Get Started</a>
+    @endif
     <!--Hamburger Icon-->
       <button
           id="menu-btn"
@@ -47,8 +81,8 @@
       >
         <a href="#">Home</a>
         <a href="#aboutUs">About Us</a>
-        <a href="#">First Aid Instructions</a>
-        <a href="#">Ambulance Locations</a>
+        <a href="{{ route('guest.firstAid.index') }}">First Aid Instructions</a>
+        <a href="{{ route('guest.map') }}">Ambulance Locations</a>
       </div>
     </div>
   </nav>
@@ -286,7 +320,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+<!--   <script src="js/script.js"></script> -->
   
 </body>
 </html>

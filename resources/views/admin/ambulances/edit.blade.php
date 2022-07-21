@@ -94,7 +94,7 @@ body h2{
 
 		<div class="mb-6">
 			<label>Contact</label>
-			<input type="tel" name="contact" id="contact" placeholder="Enter Contact" value="">
+			<input type="tel" name="contact" id="contact" placeholder="Enter Contact" value="{{ $institution->contact }}">
 		</div>
 
 		<div class="mb-6">
@@ -107,7 +107,7 @@ body h2{
      
 			<input  type="submit" name="submit" value="Submit">
 			
-			<a href="#" >Delete</a>
+			<a href="{{ route('admin.ambulance.destroy', $institution->id) }}" >Delete</a>
 </div>
 		<div class="mb-6"></div>
 	</form>

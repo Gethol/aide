@@ -119,16 +119,6 @@ class AmbulanceController extends Controller
      */
     public function show($id)
     {
-        //
-        $institution = MedicalInstitution::find($id);
-        echo "<pre>";
-        print_r($institution);
-       
-
-        //echo $institution->location;
-        print_r( json_decode($institution->location));
-         echo "</pre>";
-
 
     }
 

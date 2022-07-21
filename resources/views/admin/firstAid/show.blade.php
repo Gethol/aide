@@ -119,9 +119,9 @@
 		 <h2 class="mt-6 mb-6 font-semibold text-black">Signs And Symptoms</h2>
 				{!! $instruction->symptoms !!}
 		 </div>
-     <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Edit</a>
+     <a href="{{ route('admin.firstAid.edit', $instruction->id) }}" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Edit</a>
 
-      <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Delete</a>
+      <a href="route('admin.firstAid.destroy', $instruction->$id)" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightBlue rounded-full baseline hover:bg-brightYellow">Delete</a>
 	</div>
   
 
