@@ -194,5 +194,16 @@ class FirstAidController extends Controller
     public function destroy($id)
     {
         //
+        $instruction = FirstAidInstruction::find($id);
+ 
+        $instruction->delete();
+
+
+            if($instruction){
+                return redirect()->route('admin.firstAid.index')->with('status', 'Post Deleted');
+            }else{
+                return redirect()->back()->with('status', 'Post Deletion Failed');
+            }
+
     }
 }

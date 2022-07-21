@@ -21,7 +21,7 @@
 <input type="checkbox" id="nav-toggle">
 <div class="sidebar">
 	<div class="sidebar-brand">
-		<img src="../../../public/img/logo2-removebg-preview.png" alt="">
+		<img src="img/logo2-removebg-preview.png" alt="">
 	</div>
 
 	<div class="sidebar-menu">
@@ -32,13 +32,13 @@
 		</li>
 
 		<li>
-			<a href=""><span><i class="fa fa-clipboard" aria-hidden="true"></i></span>
-				<span>Add First Aid Instructions</span></a>
+			<a href="{{ route('admin.firstAid.home')  }}"><span><i class="fa fa-clipboard" aria-hidden="true"></i></span>
+				<span>First Aid Instructions</span></a>
 		</li>
 
 		<li>
-			<a href=""><span><i class="fa fa-ambulance" aria-hidden="true"></i></span>
-				<span>Add Ambulance Locations</span></a>
+			<a href="{{ route('admin.ambulance.home') }}"><span><i class="fa fa-ambulance" aria-hidden="true"></i></span>
+				<span>Ambulance Locations</span></a>
 		</li>
 
 		
@@ -63,7 +63,7 @@
 		<div class="user-wrapper">
 			<img src="img/avatar-anisha.png" alt="" width="40px" height="40px">
 		<div>
-			<h4>Ariana Grande</h4>
+			<h4>{{Auth::user()->firstName. " ". Auth::user()->secondName}}</h4>
       <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
@@ -72,7 +72,7 @@
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
-                        </form>
+      </form>
 		</div>
 
 		</div>

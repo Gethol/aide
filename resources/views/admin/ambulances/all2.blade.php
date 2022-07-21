@@ -172,6 +172,7 @@
 <body>
 
 
+
 	<div class="flex">
 	<div class='sidebar'>
 	  <div class='heading'>
@@ -230,6 +231,7 @@
 	    if (store.properties.ambulances) {
 	      details.innerHTML += ` · ${store.properties.ambulances} Ambulances`;
 	      details.innerHTML +=  `<br>Contact: ${store.properties.contact}`;
+	      details.innerHTML += `<br><a style="color:#8cc63f;font-weight: 600;"  href="/admin/ambulance/${store.properties.id}/edit">Edit</a> `
 	    }
 	    if (store.properties.distance) {
 	      const roundedDistance = Math.round(store.properties.distance * 100) / 100;
@@ -404,7 +406,7 @@
 						    options
 						  );
 					}
-					// Code for the next step will go here
+					
 					stores.features.sort((a, b) => {
 					  if (a.properties.distance > b.properties.distance) {
 					    return 1;
@@ -414,7 +416,7 @@
 					  }
 					  return 0; // a must be equal to b
 					});
-					// Code for the next step will go here
+					
 					const listings = document.getElementById('listings');
 					while (listings.firstChild) {
 					  listings.removeChild(listings.firstChild);

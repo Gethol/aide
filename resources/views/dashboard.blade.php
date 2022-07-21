@@ -11,9 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in as a Regular User! 
                 </div>
-                <div>
-                    <pre>
-
+                <div>                   
 
                     @if(session()->get('med_info') == 1)
                     <a href="{{ route('medical-info.edit', Auth::id()) }}">Edit Medical Information</a>
@@ -23,6 +21,15 @@
                     <a href="{{ route('medical-info.create') }}">Add Medical Information</a>
                 </div>
                     @endif
+                      <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                      <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+      </form>
 
             </div>
         </div>

@@ -30,6 +30,7 @@ class GuestController extends Controller
                 "id" => $institution->id,
                 "name" => $institution->name,
                 "ambulances" => $institution->ambulances,
+                "contact" => $institution->contact,
             ],
 
         ];
